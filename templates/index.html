@@ -1,0 +1,15 @@
+<!-- index.html -->
+{% extends 'base.html'%}
+{% block title %} Welcome to my blog {% endblock %}
+{% block headmessage %} 
+	<h3> The list </h3> 
+{% endblock %}
+
+{% block content %} 
+	{% for post in posts %}
+		<p style="font-size: 14pt; font-weight: bold;">
+			<a href="post/{{post.slug}}"> {{post.title}}</a>
+		</p>
+	{% endfor %} 
+{% endblock %}
+
